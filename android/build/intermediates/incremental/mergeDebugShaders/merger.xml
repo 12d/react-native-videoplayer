@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="/Users/chen/Documents/workspace/mango/js/node_modules/react-native-video/android/src/main/shaders"/></dataSet><dataSet config="debug"><source path="/Users/chen/Documents/workspace/mango/js/node_modules/react-native-video/android/src/debug/shaders"/></dataSet></merger>
