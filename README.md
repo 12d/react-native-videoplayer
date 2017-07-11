@@ -1,25 +1,21 @@
-## react-native-video-fullscreen
+## react-native-videoplayer
 
-A `<Video>` component for react-native, based on `react-native-video`
+基于react-native-video开发的react-native平台视频播放器，完美支持`Android` `iOS`，**包含全屏功能**
 
 Requires react-native >= 0.41.0
 
-### Add it to your project
+### 安装
 
-Run `npm install react-native-video-fullscreen` or `yarn add react-native-video-fullscreen`
+在cmd中运行 `npm install react-native-videoplayer`
 
 ### Linking
 
-#### Automatical
+#### 自动
 Run `react-native link`
-    
-#### Manual
+
+#### 手动
 
 ##### iOS
-
-Run `react-native link` to link the react-native-video library.
-
-If you would like to allow other apps to play music over your video component, add:
 
 **AppDelegate.m**
 
@@ -29,22 +25,18 @@ If you would like to allow other apps to play music over your video component, a
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
   ...
-  [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryAmbient error:nil];  // allow
+  [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryAmbient error:nil];  
   ...
 }
 ```
 
 ##### Android
 
-Run `react-native link` to link the react-native-video library.
-
-Or if you have trouble, make the following additions to the given files manually:
-
 **android/settings.gradle**
 
 ```
-include ':react-native-video'
-project(':react-native-video').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-video/android')
+include ':react-native-videoplayer'
+project(':react-native-videoplayer').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-videoplayer/android')
 ```
 
 **android/app/build.gradle**
@@ -52,7 +44,7 @@ project(':react-native-video').projectDir = new File(rootProject.projectDir, '..
 ```
 dependencies {
    ...
-   compile project(':react-native-video')
+   compile project(':react-native-videoplayer')
 }
 ```
 
@@ -70,9 +62,9 @@ Under `.addPackage(new MainReactPackage())`:
 .addPackage(new ReactVideoPackage())
 ```
 
-### Note: In react-native >= 0.29.0 you have to edit `MainApplication.java`
+### Note: In react-native >= 0.41.0 you have to edit `MainApplication.java`
 
-**MainApplication.java** (react-native >= 0.29.0)
+**MainApplication.java** (react-native >= 0.41.0)
 
 On top, where imports are:
 
