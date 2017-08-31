@@ -470,6 +470,7 @@ public class ReactVideoView extends ScalableVideoView implements MediaPlayer.OnP
         // 隐藏状态栏
 //        mThemedReactContext.getCurrentActivity().getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
         mThemedReactContext.getCurrentActivity().getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        mThemedReactContext.getCurrentActivity().getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 //        viewGroup.setSystemUiVisibility(View.SYSTEM_UI_FLAG_FULLSCREEN);
     }
     private void showHeaderBar(){
@@ -477,6 +478,7 @@ public class ReactVideoView extends ScalableVideoView implements MediaPlayer.OnP
 //        getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
         // 显示状态栏
         mThemedReactContext.getCurrentActivity().getWindow().clearFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        mThemedReactContext.getCurrentActivity().getWindow().clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
     }
     public void exitFullscreen(){
         if(fullscreenPlayer!=null) {

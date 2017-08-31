@@ -432,6 +432,9 @@ static NSString *const playbackRate = @"rate";
 {
   if(self.onVideoEnd) {
       self.onVideoEnd(@{@"target": self.reactTag});
+      if([self getFullscreen]){
+          [self setFullscreen:NO];
+      }
   }
 
   if (_repeat) {
